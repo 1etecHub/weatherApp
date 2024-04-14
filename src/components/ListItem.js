@@ -23,10 +23,10 @@ const ListItem = (props) => {
         marginVertical: 8,
         marginHorizontal: 16,
         flexDirection: row,
-        justifyContent: space-around,
-        alignItems: center,
+        justifyContent: 'space-around',
+        alignItems: 'center',
         borderWidth: 5,
-        backgroundColor: pink
+        backgroundColor: 'pink'
     },
     temp: {
         color: white,
