@@ -6,16 +6,17 @@ import IconText from "../components/IconText";
 
 const City = () => {
     const {container, imageLayout, cityName, countryName, cityText, populationWrapper, populationText,
-    riseSetWrapper, riseSetText} = styles
+    riseSetWrapper, riseSetText, rowLayout} = styles
+    
     return (
         <SafeAreaView style={container}>
             <ImageBackground source={require('../../assets/city.jpg')} style={imageLayout}>
                 <Text style={[cityName, cityText]}>London</Text>
                 <Text style={[countryName, cityText]}>UK</Text>
-                <View style={populationWrapper}>
+                <View style={[populationWrapper, rowLayout]}>
                     <IconText iconName={'user'} iconColor={'red'} bodyText={'8000'} bodyTextStyle={populationText}/>
                 </View>
-                <View style={riseSetWrapper}>
+                <View style={[riseSetWrapper, rowLayout]}>
                     <IconText iconName={'sunrise'} iconColor={'white'} bodyText={'10:46:58am'} bodyTextStyle={riseSetText}/>
                     <IconText iconName={'sunset'} iconColor={'white'} bodyText={'17:28:15pm'} bodyTextStyle={riseSetText}/>
                 </View>
@@ -48,8 +49,6 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     populationWrapper: {
-        flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'center',
         marginTop: 30,
 
@@ -61,14 +60,16 @@ const styles = StyleSheet.create({
     
     },
     riseSetWrapper: {
-        flexDirection: 'row',
-        alignItems: 'center',
         justifyContent: 'space-around',
         marginTop: 30
     },
     riseSetText: {
         fontSize: 20,
         color: 'white',
+    },
+    rowLayout: {
+        flexDirection: 'row',
+        alignItems: 'center',
         
     }
 })
