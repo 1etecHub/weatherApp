@@ -5,37 +5,38 @@ import ListItem from "../components/ListItem";
 
 
 
-const DATA = [
-    {
-      dt_txt: "2024-04-13",
-      main: {
-        temp_min: 8.55,
-        temp_max: 7.55
-      },
-      weather: [ {
-        main: 'clear'
-      }
-      ]
-    },
+
+// const DATA = [
+//     {
+//       dt_txt: "2024-04-13",
+//       main: {
+//         temp_min: 8.55,
+//         temp_max: 7.55
+//       },
+//       weather: [ {
+//         main: 'clear'
+//       }
+//       ]
+//     },
   
-    {
-      dt_txt: "2024-04-14",
-      main: {
-        temp_min: 8.55,
-        temp_max: 7.55
-      },
-      weather: [
-        {
-          main: 'clear'
-        }
-      ]
-    },
+//     {
+//       dt_txt: "2024-04-14",
+//       main: {
+//         temp_min: 8.55,
+//         temp_max: 7.55
+//       },
+//       weather: [
+//         {
+//           main: 'clear'
+//         }
+//       ]
+//     },
     
-  ]
+//   ]
 
 
 
-const UpcomingWeather = () => {
+const UpcomingWeather = ({weatherData}) => {
     const renderSeparator = () => <View style={{backgroundColor:'red', height: 2}} />;
     const renderItem = ({item}) => (
         <ListItem 
@@ -51,9 +52,9 @@ const UpcomingWeather = () => {
         <SafeAreaView style={container}>
             <ImageBackground 
             source={require('../../assets/thunderstorm.jpg')} style={image}>
-                <Text>Upcoming Weather</Text>
+              
                 <FlatList
-                data={DATA}
+                data={weatherData}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.dt_txt}
                 ItemSeparatorComponent={renderSeparator}
