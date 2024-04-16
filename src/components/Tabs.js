@@ -32,12 +32,12 @@ const Tabs = ({weather}) => {
             }}>
                 {() => <CurrentWeather weatherData ={weather.list[0]} />}
             </Tab.Screen>
-            <Tab.Screen name={'upcoming'} component={UpcomingWeather} optoins={{
+            <Tab.Screen name={'upcoming'} options={{
             tabBarIcon: ({focused}) => {<Feather name={'clockgit'} size={25} color={focused ? 'tomato' : 'black'} />}
             }}>
                 {() => <UpcomingWeather weatherData ={weather.list} />}
             </Tab.Screen>
-            <Tab.Screen name={'city'} component={City} optoins={{
+            <Tab.Screen name={'city'} options={{
             tabBarIcon: ({focused}) => {<Feather name={'droplet'} size={25} color={focused ? 'tomato' : 'black'} />}
             }}
             >

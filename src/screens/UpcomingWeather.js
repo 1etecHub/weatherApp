@@ -48,6 +48,7 @@ const UpcomingWeather = ({weatherData}) => {
     )
 
     const {container, image} = styles
+    
     return (
         <SafeAreaView style={container}>
             <ImageBackground 

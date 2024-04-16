@@ -19,7 +19,7 @@ const CurrentWeather = ({weatherData}) => {
         <Feather name={weatherType[weatherCondition].icon} size={100} color="white" />
         <Text style={temp}>{temp}</Text>
         <Text style={feels}>{`feels like ${feels_like}`}</Text>
-        <RowText messageOne={`High: ${temp_max}`} messageTwo={`High: ${temp_min}`} containerStyles={highLowWrapper} messageOneStyles={highLow} messageTwoStyles={highLow} />
+        <RowText messageOne={`High: ${temp_max}°`} messageTwo={`High: ${temp_min}°`} containerStyles={highLowWrapper} messageOneStyles={highLow} messageTwoStyles={highLow} />
       </View>
 
       <RowText 

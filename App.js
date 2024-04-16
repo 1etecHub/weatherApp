@@ -7,6 +7,7 @@ import Tabs from "./src/components/Tabs";
 import { useState } from "react";
 import { WEATHER_API_KEY } from '@env'
 import { UseGetWeather } from "./src/hooks/UseGetWeather";
+import ErrorItem from "./src/components/ErrorItem";
 
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
@@ -26,7 +27,7 @@ const App = () => {
 
   return (
     <View style={container}>
-      <ActivityIndicator size={'large'} color={'blue'} />
+      {loading ? <ActivityIndicator size={'large'} color={'blue'} /> : <ErrorItem />}
     </View>
   )
 
