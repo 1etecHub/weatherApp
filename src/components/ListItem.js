@@ -10,7 +10,7 @@ const ListItem = (props) => {
 
     return (
     <View style={item}>
-        <Feather name={WeatherType[condition].ocon} size={50} color={white}/>
+        <Feather name={WeatherType[condition]?.icon} size={50} color={white}/>
         <View>
         <Text style={date}>{moment(dt_txt.format('dddd'))}</Text>
         <Text style={date}>{moment(dt_txt.format('h:mm:ss a'))}</Text>
@@ -31,7 +31,7 @@ const ListItem = (props) => {
         justifyContent: 'space-around',
         alignItems: 'center',
         borderWidth: 5,
-        backgroundColor: 'pink'
+        backgroundColor: 'indianred'
     },
     temp: {
         color: white,
