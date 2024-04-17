@@ -2,12 +2,12 @@ import React from "react";
 import { View, Text } from "react-native";
 
 const RowText = (props) => {
-    const {} = props
+    
     const { containerStyles, messageOne, messageTwo, messageOneStyles, messageTwoStyles } = props
     return (
         <view style={containerStyles}>
-          <Text style={message2Styles}>{messageOne}</Text>
-          <Text style={message2Styles}>{messageTwo}</Text>
+          <Text style={messageOneStyles}>{messageOne}</Text>
+          <Text style={messageTwoStyles}>{messageTwo}</Text>
         </view>
     )
 }
